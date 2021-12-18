@@ -26,7 +26,7 @@ describe('MessageDisplay', () => {
 
   it('Displays an error when getMessage call fails', async () => {
     const mockError = 'Oops! Something went wrong.'
-    getMessage.mockRejectedValueOnce(mockError)
+    getMessage.mockRejectedValueOnce(mockError) //simulate the failed get request
     const wrapper = mount(MessageDisplay)
 
     await flushPromises()
